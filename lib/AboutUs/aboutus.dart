@@ -25,8 +25,8 @@ class _AboutusState extends State<Aboutus> {
     WidgetsFlutterBinding.ensureInitialized();
     SharedPreferences prefs = await SharedPreferences.getInstance();
     authToken = prefs.getString('authToken');
-    userName = prefs.getString('username');
-    Mobileno = prefs.getString('contactno');
+    Name = prefs.getString('username');
+    mobileno = prefs.getString('contactno');
     setState(() {});
   }
 
@@ -37,8 +37,7 @@ class _AboutusState extends State<Aboutus> {
         child: Container(
           height: 500,
           width: 400,
-          child:
-              Text("This is $authToken and this is $userName and $Mobileno "),
+          child: Text("This is $authToken and this is $Name and $mobileno "),
         ),
       ),
     );
